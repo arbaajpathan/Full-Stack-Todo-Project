@@ -11,7 +11,13 @@ const cors = require("cors");
 // Middleware for parsing JSON bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:["https://full-stack-todo-project-jwt-xsab.vercel.app/"],
+  method:["post","get"],
+  credentials:true
+}
+            ));
+
 
 // Set up MySQL connection
 const db = mysql.createConnection({

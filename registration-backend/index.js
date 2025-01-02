@@ -12,7 +12,7 @@ const cors = require("cors");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-  origin:["https://full-stack-todo-project-jwt-xsab.vercel.app/"],
+  origin:["https://full-stack-todo-projectfrontend.vercel.app"],
   method:["post","get"],
   credentials:true
 }
